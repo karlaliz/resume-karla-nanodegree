@@ -20,7 +20,7 @@ var bio = {
     },
     "pictureURL" : "images/me.jpg",
     "welcome" : "Welcome to my resume feel free to contact me with additional questions",
-    "skills" : ["Honest", "Hard-Working", "Tenacious", "Analytical", "Problem-Solver" , "Creative"
+    "skills" : ["HTML", "CSS", "Phython", "Self-directed study", "Google App Engine" , "Get & Post Request", "Database Setup", "Database Querying", "Javascrip", "Responsive Web Desing", "Bootstrap", "Git & GitHub" 
     ]
 };
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -47,15 +47,27 @@ if (bio.skills.length>0) {
   $("#header").append(HTMLskillsStart);
   var formattedSkill = HTMLskills.replace("%data%", bio.skills [0]);
   $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills [1]);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [1]);
   $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills [2]);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [2]);
   $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills [3]);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [3]);
   $ ("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills [4]);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [4]);
   $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills [5]);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [5]);
+  $("#skills").append(formattedSkill);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [6]);
+  $("#skills").append(formattedSkill);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [7]);
+  $("#skills").append(formattedSkill);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [8]);
+  $("#skills").append(formattedSkill);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [9]);
+  $ ("#skills").append(formattedSkill);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [10]);
+  $("#skills").append(formattedSkill);
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills [11]);
   $("#skills").append(formattedSkill);
 
 };
