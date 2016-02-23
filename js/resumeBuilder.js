@@ -66,7 +66,7 @@ var projects ={
         { 
         "title": "Portfolio",
         "dates": "2016",
-        "description": "he beginning of my portfolio, so far only contains spaces to put my projects, done with HTML, CSS and Bootstrap",
+        "description": "This is the beginning of my portfolio, so far only contains spaces to put my projects, done with HTML, CSS and Bootstrap",
         "images":["images/port1.png", "images/port2.png", "images/port3.png"]
         },
     ]
