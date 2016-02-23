@@ -2,42 +2,32 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-//var name = "Karla Parada Holguin"
-//var formattedName = HTMLheaderName.replace("%data%",name);
-//$("#header").append(formattedName);
-//var role = "Web Developer";
-//var formattedRole = HTMLheaderRole.replace("%data%", role);
-//
-
 var bio = {
     "name" : "Karla Parada Holguin",
-    "role" : "Web Developer",
+    "role" : "Front-End Web Developer",
     "contacts" : { 
         "location": "New Hampshire",
         "email":"arq.kparada@gmail.com", 
-        "mobile": "(603)966-66-66", 
+        "mobile": "(603)000-00-00", 
         "github" : "karlaliz"
     },
     "pictureURL" : "images/me.jpg",
-    "welcome" : "Welcome to my resume feel free to contact me with additional questions",
+    "welcome" : "'Primo facit, quod necesse est; ergo quod est possibile; subito facis impossibile.'   F.A.",
     "skills" : ["HTML", "CSS", "Phython", "Self-directed study", "Google App Engine" , "Get & Post Request", "Database Setup", "Database Querying", "Javascrip", "Responsive Web Desing", "Bootstrap", "Git & GitHub" 
     ]
 };
+
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").append(formattedRole);
-var mobile = bio.contacts.mobile;
-var formattedMobile = HTMLmobile.replace("%data%", mobile);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#topContacts").append(formattedMobile);
-var email = bio.contacts.email;
-var formattedEmail = HTMLemail.replace("%data%", email);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 $("#topContacts").append(formattedEmail);
-var github = bio.contacts.github;
-var formattedGithub = HTMLgithub.replace("%data%", github);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 $("#topContacts").append(formattedGithub);
-var llocation = bio.contacts.location;
-var formattedLocation = HTMLlocation.replace("%data%", llocation);
+var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
 $("#header").append(formattedBioPic);
@@ -69,77 +59,94 @@ if (bio.skills.length>0) {
   $("#skills").append(formattedSkill);
   var formattedSkill = HTMLskills.replace("%data%", bio.skills [11]);
   $("#skills").append(formattedSkill);
-
 };
 
-//$("#main").append(bio.name);
-//$("#main").append(bio.role);
-//$("#main").append(bio.contactInfo);
-//$("#main").append(bio.pictureURL);
-//$("#main").append(bio.welcome);
-//$("#main").append(bio.skills);
+var projects ={
+    "projects" :[
+        { 
+        "title": "Portfolio",
+        "dates": "2016",
+        "description": "he beginning of my portfolio, so far only contains spaces to put my projects, done with HTML, CSS and Bootstrap",
+        "images":["images/port1.png", "images/port2.png", "images/port3.png"]
+        },
+    ]
+}
 
-//var work= {}
-//work.position = "Architec";
-//work.employer = "Jaacro";
-//work.years = "2 years"
+projects.display = function(){
+  for (project in projects.projects){
+    $("#projects").append(HTMLprojectStart);
 
-//var education ={}
-//education["name"] = "ITCH II"
-//education["years"] = "2003-2008"
-//education["city"] = "Chihuahua, Mexico"
-
-//$("#main").append(work["position"])
-//$("#main").append(education.name)
+    var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+    $(".project-entry:last").append(formattedTitle);
+    var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+    $(".project-entry:last").append(formattedDates);
+    var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description)
+    $(".project-entry:last").append(formattedDescription);
+    if (projects.projects[project].images.length > 0){
+      for (image in projects.projects[project].images){
+        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+        $(".project-entry:last").append(formattedImage);
+      }
+    }
+  }
+}
+projects.display();
 
 var education ={
     "schools" :[
         { 
         "name":"ITECH II",
         "city": "Mexico",
-        "degree": "Bachelor s degree",
-        "majors" : "Math",
-        "dates" : "2003-2008",
-        "url" : "http://www.itchihuahuaii.edu.mx/",
-        "location" : "Chihuahua, Mexico"
+        "degree": "Bachelor's degree",
+        "majors": "Math",
+        "dates": "2003-2008",
+        "url": "http://www.itchihuahuaii.edu.mx/",
+        "location": "Chihuahua, Mexico"
         },
         {   
         "name": "CBTiS 158",
         "city": "Mexico",
-        "degree" :"High school",
-        "majors" : "accounting",
-        "dates" : "1998-2001",
-        "location" : "Chihuahua, Mexico"
+        "degree":"High school",
+        "majors": "Accounting",
+        "dates": "1998-2001",
+        "location": "Chihuahua, Mexico"
         }
     ],
     "onLineCourses": [
         {
-        "title" : "Introduction to Programming Nanodegree",
-        "school" : "Udacity",
-        "dates" : "2015",
-        "url" : "https://www.udacity.com/nanodegree"
+        "title": "Front-End Nanodegree",
+        "school": "Udacity",
+        "dates": "2016",
+        "url": "https://www.udacity.com/nanodegree"            
         },
         {
-        "title" : "Introduction to Computer Sciense",
-        "school" : "Udacity",
-        "dates" : "2014",
-        "url" : "https://www.udacity.com/nanodegree"            
+        "title": "Introduction to Programming Nanodegree",
+        "school": "Udacity",
+        "dates": "2015",
+        "url": "https://www.udacity.com/nanodegree"
+        },
+        {
+        "title": "Introduction to Computer Sciense",
+        "school": "Udacity",
+        "dates": "2014",
+        "url": "https://www.udacity.com/nanodegree"            
         }
+
     ]
 }; 
 education.display = function() {
- for (school in education.schools) {
+ for (element in education.schools) {
   $("#education").append(HTMLschoolStart);
-  var SchName = HTMLschoolName.replace("%data%", education.schools[school].name);
-  var formattedSchName = SchName.replace("#", education.schools[school].url);
+  var schoolName = HTMLschoolName.replace("%data%", education.schools[element].name);
+  var formattedSchName = schoolName.replace("#", education.schools[element].url);
   $(".education-entry:last").append(formattedSchName);
-  var formattedSchLoc = HTMLschoolLocation.replace("%data%", education.schools[school].city);
+  var formattedSchLoc = HTMLschoolLocation.replace("%data%", education.schools[element].city);
   $(".education-entry:last").append(formattedSchLoc);
-  var formattedSchDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+  var formattedSchDates = HTMLschoolDates.replace("%data%", education.schools[element].dates);
   $(".education-entry:last").append(formattedSchDates);
-  var formattedSchDeg = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+  var formattedSchDeg = HTMLschoolDegree.replace("%data%", education.schools[element].degree);
   $(".education-entry:last").append(formattedSchDeg);
-  var formattedSchMaj = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+  var formattedSchMaj = HTMLschoolMajor.replace("%data%", education.schools[element].majors);
   $(".education-entry:last").append(formattedSchMaj);
  };
  $(".education-entry:last").append(HTMLonlineClasses);
@@ -162,15 +169,14 @@ var work = {
         "location" : "Chihuahua, Mexico",
         "title" : "Project manager",
         "dates" : "2011-2012",
-        "description": "project coordination, paperwork government agencies, personnel recruitment, review plans, project modifications, coordination of sales, personnel contatacion."
-
+        "description": "Coordination of construction projects, coordinating sales, reviewing architectural plans, review and approval of budgets, recruiment."
         },
         {
         "employer" : "Remax",
         "location" : "Chihuahua, Mexico",
         "title" : "Real estate agent",
         "dates" : "2009- 2010",
-        "description": "cadastral plans, procedures in notaries, sales and  market studies"
+        "description": "Sales agent, make architectural plans, real estate market value"
         }       
     ]
 }  
