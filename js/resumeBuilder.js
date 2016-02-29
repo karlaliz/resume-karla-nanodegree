@@ -5,15 +5,14 @@ var bio = {
     "name" : "Karla Parada Holguin",
     "role" : "Front-End Web Developer",
     "contacts" : { 
-        "location": "New Hampshire",
-        "email":"arq.kparada@gmail.com", 
-        "mobile": "(603)000-00-00", 
-        "github" : "karlaliz"
+        "mobile": "(603)000-00-00",
+        "email":"arq.kparada@gmail.com",  
+        "github" : "karlaliz",
+        "location": "New Hampshire"
     },
-    "biopic" : "images/me.jpg",
     "welcomeMessage" : "'Primo facit, quod necesse est; ergo quod est possibile; subito facis impossibile.'   F.A.",
-    "skills" : ["HTML", "CSS", "Phython", "Self-directed study", "Google App Engine" , "Get & Post Request", "Database Setup", "Database Querying", "Javascrip", "Responsive Web Desing", "Bootstrap", "Git & GitHub" 
-    ]
+    "skills" : ["HTML", "CSS", "Phython", "Self-directed study", "Google App Engine" , "Get & Post Request", "Database Setup", "Database Querying", "Javascrip", "Responsive Web Desing", "Bootstrap", "Git & GitHub"],
+    "biopic" : "images/me.jpg"
 };
 
 bio.display = function(){
@@ -67,58 +66,22 @@ bio.display = function(){
 };
 bio.display();
 
-var projects ={
-    "projects" :[
-        { 
-        "title": "Portfolio",
-        "date": "2016",
-        "description": "This is the beginning of my portfolio, so far only contains spaces to put my projects, done with HTML, CSS and Bootstrap",
-        "images":["images/port1.png", "images/port2.png", "images/port3.png"]
-        },
-    ]
-};
-
-projects.display = function(){
-    for (var project in projects.projects){
-        if (projects.projects.hasOwnProperty(project)){
-            $("#projects").append(HTMLprojectStart);
-            var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-            $(".project-entry:last").append(formattedTitle);
-            var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].date);
-            $(".project-entry:last").append(formattedDates);
-            var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-            $(".project-entry:last").append(formattedDescription);
-            if (projects.projects[project].images.length > 0){
-                for (var image in projects.projects[project].images){
-                    if (projects.projects[project].images.hasOwnProperty(image)){
-                        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-                        $(".project-entry:last").append(formattedImage);
-                    }
-                }        
-            }
-        }
-    }
-};
-projects.display();
-
 var education ={
     "schools" :[
         { 
         "name":"ITECH II",
-        "city": "Mexico",
-        "degree": "Bachelor's degree",
+        "location": "Chihuahua, Mexico",
+        "degree": "Bachelors degree",
         "majors": "Math",
-        "date": "2003-2008",
-        "url": "http://www.itchihuahuaii.edu.mx/",
-        "location": "Chihuahua, Mexico"
+        "dates": "2003-2008",
+        "url": "http://www.itchihuahuaii.edu.mx/"
         },
         {   
         "name": "CBTiS 158",
-        "city": "Mexico",
-        "degree":"High school",
+        "location": "Chihuahua, Mexico",
+        "degree": "High school",
         "majors": "Accounting",
-        "date": "1998-2001",
-        "location": "Chihuahua, Mexico"
+        "dates": "1998-2001"
         }
     ],
     "onlineCourses": [
@@ -150,9 +113,9 @@ education.display = function() {
             var schoolName = HTMLschoolName.replace("%data%", education.schools[School].name);
             var formattedSchName = schoolName.replace("#", education.schools[School].url);
             $(".education-entry:last").append(formattedSchName);
-            var formattedSchLoc = HTMLschoolLocation.replace("%data%", education.schools[School].city);
+            var formattedSchLoc = HTMLschoolLocation.replace("%data%", education.schools[School].location);
             $(".education-entry:last").append(formattedSchLoc);
-            var formattedSchDates = HTMLschoolDates.replace("%data%", education.schools[School].date);
+            var formattedSchDates = HTMLschoolDates.replace("%data%", education.schools[School].dates);
             $(".education-entry:last").append(formattedSchDates);
             var formattedSchDeg = HTMLschoolDegree.replace("%data%", education.schools[School].degree);
             $(".education-entry:last").append(formattedSchDeg);
@@ -161,15 +124,15 @@ education.display = function() {
         }
     }
         $(".education-entry:last").append(HTMLonlineClasses);
-            for (var OnLine in education.onlineCourses) {
-                if (education.onlineCourses.hasOwnProperty(OnLine)){
-                    var OLTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[OnLine].title);
-                    var formattedOLTitle = OLTitle.replace("#", education.onlineCourses[OnLine].url);
-                    $(".education-entry:last").append(formattedOLTitle);
-                    var formattedOLSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[OnLine].school);
-                    $(".education-entry:last").append(formattedOLSchool);
-                    var formattedOLDates = HTMLonlineDates.replace("%data%", education.onlineCourses[OnLine].date);
-                    $(".education-entry:last").append(formattedOLDates);
+            for (var Online in education.onlineCourses) {
+                if (education.onlineCourses.hasOwnProperty(Online)){
+                    var OnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[Online].title);
+                    var formattedOnlineTitle = OnlineTitle.replace("#", education.onlineCourses[Online].url);
+                    $(".education-entry:last").append(formattedOnlineTitle);
+                    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[Online].school);
+                    $(".education-entry:last").append(formattedOnlineSchool);
+                    var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[Online].date);
+                    $(".education-entry:last").append(formattedOnlineDates);
                 }
             }
 };
@@ -179,16 +142,16 @@ var work = {
     "jobs": [
         {
         "employer" : "Jaacro",
-        "location" : "Chihuahua, Mexico",
         "title" : "Project manager",
-        "date" : "2011-2012",
+        "location" : "Chihuahua, Mexico",
+        "dates" : "2011-2012",
         "description": "Coordination of construction projects, coordinating sales, reviewing architectural plans, review and approval of budgets, recruiment."
         },
         {
         "employer" : "Remax",
-        "location" : "Chihuahua, Mexico",
         "title" : "Real estate agent",
-        "date" : "2009- 2010",
+        "location" : "Chihuahua, Mexico",
+        "dates" : "2009- 2010",
         "description": "Sales agent, make architectural plans, real estate market value"
         }       
     ]
@@ -212,6 +175,40 @@ work.display = function() {
     }
 };
 work.display();
+
+var projects ={
+    "projects" :[
+        { 
+        "title": "Portfolio",
+        "dates": "2016",
+        "description": "This is the beginning of my portfolio, so far only contains spaces to put my projects, done with HTML, CSS and Bootstrap",
+        "images":["images/port1.png", "images/port2.png", "images/port3.png"]
+        },
+    ]
+};
+
+projects.display = function(){
+    for (var project in projects.projects){
+        if (projects.projects.hasOwnProperty(project)){
+            $("#projects").append(HTMLprojectStart);
+            var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+            $(".project-entry:last").append(formattedTitle);
+            var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+            $(".project-entry:last").append(formattedDates);
+            var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+            $(".project-entry:last").append(formattedDescription);
+            if (projects.projects[project].images.length > 0){
+                for (var image in projects.projects[project].images){
+                    if (projects.projects[project].images.hasOwnProperty(image)){
+                        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+                        $(".project-entry:last").append(formattedImage);
+                    }
+                }        
+            }
+        }
+    }
+};
+projects.display();
 
 function locationizer(work_obj) {
     var locationArray = [];
