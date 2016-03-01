@@ -31,10 +31,32 @@ h1 {
   display: inline;
 }
 
+.text-h1 {
+  font-size: 40px;
+  color: #669966;
+  line-height: 48px;
+  display: inline;
+}
+
 h2 {
   font-weight: bold;
   font-size: 24px;
+  color: #858585;
+  line-height: 29px;
+  padding: 10px;
+}
+
+.text-h2 {
+  font-weight: bold;
+  font-size: 24px;
   color: #999;
+  line-height: 29px;
+  padding: 10px;
+}
+.text-green {
+  font-weight: bold;
+  font-size: 24px;
+  color: #0B3E3E;
   line-height: 29px;
   padding: 10px;
 }
@@ -46,10 +68,24 @@ h3 {
   line-height: 22px;
 }
 
+.text-h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #4a4a4a;
+  line-height: 22px;
+}
+
 h4 {
   font-weight: bold;
   font-size: 14px;
   color: #4a4a4a;
+  line-height: 17px;
+}
+
+.text-h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
   line-height: 17px;
 }
 
@@ -119,6 +155,12 @@ a {
 
 .gray {
   background-color: #f3f3f3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.green {
+  background-color: #99CC66;
   padding-bottom: 10px;
   clear:both;
 }

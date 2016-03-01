@@ -23,7 +23,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -51,7 +51,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <div id="main">
+  <div id="main" class="container">
 <!-- You'll be deleting this line in the course -->
 
     <!--
@@ -60,26 +60,50 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+    <div class="row">
+      <div class="col-md-12 ">
+        <div id="header" class="center-content clear-fix">
+          <ul id="topContacts" class="flex-box"></ul>
+        </div>
+      </div>
     </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+      <div style="clear: both;"></div>
+    <div class="row">
+      <div class="col-md-12 ">
+        <div id="workExperience" class="gray">
+          <h2 class="text-h2">Work Experience</h2>
+        </div>
+      </div>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
+    <div class="row">
+      <div class="col-md-6 ">
+        <div id="projects">
+          <h2 class="text-h2">Projects</h2>
+        </div>    
+      </div>     
+      <div class="col-md-6 ">
+        <div id="projects">
+          <div id="education" class="gray">
+            <h2 class="text-h2" >Education</h2>
+          </div>
+        </div>    
+      </div>
     </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
+    <div class="row">
+      <div class="col-md-12 ">
+        <div id="mapDiv" class="gray">
+          <h2 class="text-green">Where I've Lived and Worked</h2>
+        </div>
+      </div>
     </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
+    <div class="row">
+      <div class="col-md-12 ">
+        <div id="lets-connect" class="dark-gray">
+          <h2 class="orange center-text text-h2">Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box">
+            </ul>
+        </div>
+      </div>
     </div>
   </div>
 
